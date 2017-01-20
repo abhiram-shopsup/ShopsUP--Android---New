@@ -32,6 +32,7 @@
     <string name="noNet">Oops, Your connection seems off!</string>
     <string name="noNetDes">Your internet needs to be turned ON for us to get started.</string>
     <string name="toggle_net">Please tap to retry</string>
+    <string name="bysigning"><u><![CDATA[By signing up you agree to our T&C]]></u></string>
 
     <string-array name="message_title">
         <item>--Select an Item--</item>
