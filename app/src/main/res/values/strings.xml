@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Shopsup</string>
+    <string name="stores">Stores</string>
+    <string name="coupons">Coupons</string>
+    <string name="account">Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="free_shots">Free shots</string>
+    <string name="change_location">Change location</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="activity_log">Activity log</string>
+    <string name="contact_us">Contact us</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="email">Email</string>
+    <string name="change_password">Change Password</string>
+    <string name="dob">DOB</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="update">Update</string>
+    <string name="submit">Submit</string>
+    <string name="write_message">Write message</string>
+    <string name="title">Shopsup</string>
+    <string name="viaMobile">VIA MOBILE NUMBER</string>
+    <string name="intro_title_three">Encash shots for coupons</string>
+    <string name="intro_desc_three">Encash your shots from various redemption partners</string>
+    <string name="intro_title_two">Earn shots</string>
+    <string name="intro_desc_two">Earn shots on every visit and also for referring your friends</string>
+    <string name="intro_title_one">Walk into your favorite store</string>
+    <string name="intro_desc_one">Step into your preferred store from our wide range of partners </string>
+    <string name="noNet">Oops, Your connection seems off!</string>
+    <string name="noNetDes">Your internet needs to be turned ON for us to get started.</string>
+    <string name="toggle_net">Please tap to retry</string>
+
+    <string-array name="message_title">
+        <item>--Select an Item--</item>
+        <item>Store Related</item>
+        <item>App related</item>
+        <item>Misc</item>
+    </string-array>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_bar_stores"
+        android:icon="@drawable/ic_store_icon"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:title="@string/stores" />
+    <item
+        android:id="@+id/bottom_bar_coupons"
+        android:icon="@drawable/ic_coupons_icon"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:title="@string/coupons" />
+    <item
+        android:id="@+id/bottom_bar_account"
+        android:icon="@drawable/ic_account_icon"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:title="@string/account" />
+</menu>

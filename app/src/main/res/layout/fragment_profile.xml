@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/home_window_bg"
+    android:id="@+id/scrollview"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        >
+
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:transitionName="profileImage"
+            android:id="@+id/profileImage" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Prakash Bala"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/shots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/ic_shots_icon_black_12dp"
+            android:drawablePadding="6dp"
+            android:drawableStart="@drawable/ic_shots_icon_black_12dp"
+            android:text="500"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.4"
+            android:background="@color/black20pc"/>
+
+        <TextView
+            android:id="@+id/activityLog"
+            style="@style/AccountText"
+            android:drawableLeft="@drawable/ic_activity_icon"
+            android:drawableStart="@drawable/ic_activity_icon"
+            android:text="@string/activity_log"
+            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black20pc"
+            android:alpha="0.4"/>
+
+        <TextView
+            android:id="@+id/editProfile"
+            style="@style/AccountText"
+            android:drawableLeft="@drawable/ic_edit_profile"
+            android:drawableStart="@drawable/ic_edit_profile"
+            android:text="@string/edit_profile"
+            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black20pc"
+            android:alpha="0.4"/>
+
+        <TextView
+            android:id="@+id/changeLoc"
+            style="@style/AccountText"
+            android:drawableLeft="@drawable/ic_location_12dp"
+            android:drawableStart="@drawable/ic_location_12dp"
+            android:text="@string/change_location"
+            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black20pc"
+            android:alpha="0.4"/>
+
+        <TextView
+            android:id="@+id/freeShots"
+            style="@style/AccountText"
+            android:drawableLeft="@drawable/ic_free_shots"
+            android:drawableStart="@drawable/ic_free_shots"
+            android:text="@string/free_shots"
+            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black20pc"
+            android:alpha="0.4"/>
+
+        <TextView
+            android:id="@+id/contact"
+            style="@style/AccountText"
+            android:drawableLeft="@drawable/ic_contact_us"
+            android:drawableStart="@drawable/ic_contact_us"
+            android:text="@string/contact_us"
+            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black20pc"
+            android:alpha="0.4"/>
+
+        <TextView
+            android:id="@+id/terms"
+            style="@style/AccountText"
+            android:drawableLeft="@drawable/ic_terms_icon"
+            android:drawableStart="@drawable/ic_terms_icon"
+            android:text="Terms &amp; Conditions"
+            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
