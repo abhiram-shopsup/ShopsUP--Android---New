@@ -107,17 +107,6 @@
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"/>
 
-        <TextView
-            android:id="@+id/changePassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="18dp"
-            android:text="@string/change_password"
-            android:textColor="@color/colorAccent"
-            android:background="?selectableItemBackground"
-            android:textSize="16sp"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_basic_height"

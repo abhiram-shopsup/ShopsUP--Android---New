@@ -12,6 +12,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.hyperkonnect.shopsup.R;
+import com.hyperkonnect.shopsup.helper.WebViewClientHelper;
 
 
 /**
@@ -46,25 +47,9 @@ public class Fragment_More extends Fragment {
         progress = (ProgressBar)view.findViewById(R.id.progressBar);
         WebView wv = (WebView) view.findViewById(R.id.webView);
         wv.getSettings().setJavaScriptEnabled(true);
-        wv.setWebViewClient(new SwAWebClient());
+        wv.setWebViewClient(new WebViewClientHelper(progress));
         wv.loadUrl(url);
         return view;
     }
 
-
-    private class SwAWebClient extends WebViewClient {
-
-        @Override
-        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            super.onPageStarted(view, url, favicon);
-            progress.setVisibility(View.VISIBLE);
-        }
-
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            super.onPageFinished(view, url);
-            progress.setVisibility(View.GONE);
-        }
-
-    }
 }
