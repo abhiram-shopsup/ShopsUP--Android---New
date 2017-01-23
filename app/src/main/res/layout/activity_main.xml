@@ -11,8 +11,7 @@
         style="@style/Toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        tools:popupTheme="@style/AppTheme.PopupOverlay">
-    </android.support.v7.widget.Toolbar>
+        tools:popupTheme="@style/AppTheme.PopupOverlay"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

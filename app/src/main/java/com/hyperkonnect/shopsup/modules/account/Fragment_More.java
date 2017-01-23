@@ -17,15 +17,15 @@ import com.hyperkonnect.shopsup.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_Terms extends Fragment {
+public class Fragment_More extends Fragment {
     private static final String URL = "URL";
     private ProgressBar progress;
 
-    public Fragment_Terms() {
+    public Fragment_More() {
     }
 
-    public static Fragment_Terms newInstance(String url) {
-        Fragment_Terms staticPagesFragment = new Fragment_Terms();
+    public static Fragment_More newInstance(String url) {
+        Fragment_More staticPagesFragment = new Fragment_More();
         Bundle bundle = new Bundle();
         bundle.putString(URL, url);
         staticPagesFragment.setArguments(bundle);

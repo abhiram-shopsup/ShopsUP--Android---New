@@ -1,6 +1,5 @@
 package com.hyperkonnect.shopsup.fragments;
 
-import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,16 +11,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hyperkonnect.shopsup.modules.account.Activity_Terms;
 import com.hyperkonnect.shopsup.modules.account.Activity_ActivityLog;
 import com.hyperkonnect.shopsup.modules.account.Activity_ContactUs;
 import com.hyperkonnect.shopsup.modules.account.Activity_EditProfile;
 import com.hyperkonnect.shopsup.R;
 import com.hyperkonnect.shopsup.helper.ShopsupUiUtils;
-import com.hyperkonnect.shopsup.modules.account.Activity_Terms;
+import com.hyperkonnect.shopsup.modules.account.Activity_More;
 
 
 public class Fragment_Account extends Fragment {
-    private TextView activityLog,editProfileTV,contactUsTV,terms;
+    private TextView activityLog,editProfileTV,contactUsTV,terms,more;
     private ImageView profileImage;
     public Fragment_Account() {
         // Required empty public constructor
@@ -49,6 +49,7 @@ public class Fragment_Account extends Fragment {
         editProfileTV = (TextView) view.findViewById(R.id.editProfile);
         contactUsTV = (TextView) view.findViewById(R.id.contact);
         terms = (TextView) view.findViewById(R.id.terms);
+        more = (TextView) view.findViewById(R.id.more);
 
         //Rounded imageview
         ShopsupUiUtils.setRoundImage(profileImage,R.drawable.bckk,getContext());
@@ -91,6 +92,14 @@ public class Fragment_Account extends Fragment {
             public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), Activity_Terms.class);
                     startActivity(intent);
+            }
+        });
+
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Activity_More.class);
+                startActivity(intent);
             }
         });
 

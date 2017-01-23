@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Prakash Bala"
+            android:text="@string/prakash_bala"
             android:textColor="@android:color/black"
             android:textSize="20sp"/>
 
@@ -45,13 +45,14 @@
             android:drawablePadding="6dp"
             android:drawableStart="@drawable/ic_shots_icon_black_12dp"
             android:text="500"
+            android:padding="5dp"
             android:textColor="@android:color/black"
             android:textSize="14sp"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:alpha="0.4"
+            android:alpha="0.04"
             android:background="@color/black20pc"/>
 
         <TextView
@@ -60,14 +61,16 @@
             android:drawableLeft="@drawable/ic_activity_icon"
             android:drawableStart="@drawable/ic_activity_icon"
             android:text="@string/activity_log"
-            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:padding="8dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
             />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black20pc"
-            android:alpha="0.4"/>
+            android:alpha="0.04"/>
 
         <TextView
             android:id="@+id/editProfile"
@@ -75,14 +78,16 @@
             android:drawableLeft="@drawable/ic_edit_profile"
             android:drawableStart="@drawable/ic_edit_profile"
             android:text="@string/edit_profile"
-            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:padding="8dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
             />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black20pc"
-            android:alpha="0.4"/>
+            android:alpha="0.04" />
 
         <TextView
             android:id="@+id/changeLoc"
@@ -90,14 +95,16 @@
             android:drawableLeft="@drawable/ic_location_12dp"
             android:drawableStart="@drawable/ic_location_12dp"
             android:text="@string/change_location"
-            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:padding="8dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
             />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black20pc"
-            android:alpha="0.4"/>
+            android:alpha="0.04"/>
 
         <TextView
             android:id="@+id/freeShots"
@@ -105,14 +112,16 @@
             android:drawableLeft="@drawable/ic_free_shots"
             android:drawableStart="@drawable/ic_free_shots"
             android:text="@string/free_shots"
-            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:padding="8dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
             />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black20pc"
-            android:alpha="0.4"/>
+            android:alpha="0.04"/>
 
         <TextView
             android:id="@+id/contact"
@@ -120,22 +129,42 @@
             android:drawableLeft="@drawable/ic_contact_us"
             android:drawableStart="@drawable/ic_contact_us"
             android:text="@string/contact_us"
-            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:padding="8dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
             />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black20pc"
-            android:alpha="0.4"/>
+            android:alpha="0.04"/>
 
         <TextView
             android:id="@+id/terms"
             style="@style/AccountText"
             android:drawableLeft="@drawable/ic_terms_icon"
             android:drawableStart="@drawable/ic_terms_icon"
-            android:text="Terms &amp; Conditions"
-            tools:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:text="@string/terms_amp_conditions"
+            android:padding="8dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black20pc"
+            android:alpha="0.04"/>
+
+        <TextView
+            android:id="@+id/more"
+            style="@style/AccountText"
+            android:drawableLeft="@drawable/more_icon"
+            android:drawableStart="@drawable/more_icon"
+            android:text="@string/more"
+            android:padding="8dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
             />
 
     </LinearLayout>
