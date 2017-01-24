@@ -37,6 +37,7 @@
     <string name="prakash_bala">Prakash Bala</string>
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="more">More</string>
+    <string name="attach_an_image_optional">Attach image (Optional)</string>
 
     <string-array name="message_title">
         <item>--Select an Item--</item>
