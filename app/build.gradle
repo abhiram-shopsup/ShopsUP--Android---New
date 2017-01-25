@@ -18,6 +18,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        demo {
+            applicationIdSuffix ".ui"
+            versionNameSuffix "-ui"
+        }
+        full {
+            applicationIdSuffix ""
+            versionNameSuffix ""
+        }
+    }
 }
 
 dependencies {

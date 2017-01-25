@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.hyperkonnect.shopsup.MainActivity;
 import com.hyperkonnect.shopsup.R;
+import com.hyperkonnect.shopsup.modules.stores.Activity_StoreDetails;
 import com.rd.PageIndicatorView;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -19,7 +20,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class Activity_Intro extends AppCompatActivity {
 
     private ViewPager mViewPager;
-    private TextView startTv;
+    private TextView startTv,tandcTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,15 @@ public class Activity_Intro extends AppCompatActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         startTv = (TextView) findViewById(R.id.start);
+        tandcTV = (TextView)findViewById(R.id.tandc);
+
+        tandcTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Activity_Intro.this, Activity_StoreDetails.class);
+                startActivity(intent);
+            }
+        });
 
         // Set an Adapter on the ViewPager
         mViewPager.setAdapter(new Adapter_Intro(getSupportFragmentManager()));

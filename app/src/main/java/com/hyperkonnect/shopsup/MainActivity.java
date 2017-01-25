@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.hyperkonnect.shopsup.fragments.*;
@@ -22,18 +23,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
-        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
-        toolbar.setTitle("Location Here");
-        mBottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+       toolbar.setTitle("Location Here");
+           mBottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.bottom_bar_stores) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content, new Fragment_Stores(), "profile").commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content, new Fragment_Stores(), "stores").commit();
                     return true;
                 }
                 if (item.getItemId() == R.id.bottom_bar_coupons) {
-                   getSupportFragmentManager().beginTransaction().replace(R.id.content, new Fragment_Coupons(), "profile").commit();
+                   getSupportFragmentManager().beginTransaction().replace(R.id.content, new Fragment_Coupons(), "coupons").commit();
                     return true;
                 }
                 if (item.getItemId() == R.id.bottom_bar_account) {
