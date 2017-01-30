@@ -6,5 +6,7 @@
     <color name="yellow_p">#714501</color>
     <color name="white">#ffffff</color>
     <color name="home_window_bg">#f6f6f6</color>
-    <color name="black20pc">#000</color>
+    <color name="black20pc">#8b000000</color>
+    <color name="tagColor">#dccfc4</color>
+    <color name="textColor">#8bffffff</color>
 </resources>

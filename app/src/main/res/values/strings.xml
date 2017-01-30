@@ -38,6 +38,15 @@
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="more">More</string>
     <string name="attach_an_image_optional">Attach image (Optional)</string>
+    <string name="dummy_location">Orion mall</string>
+    <string name="dummy_distance">2.5 km away</string>
+    <string name="dummy_shot">500</string>
+    <string name="dummy_address">127, Orion Mall, Dr Rajkumar Rd, Rajaji Nagar, Bengaluru, Karnataka 560055.</string>
+    <string name="dummy_num">9677330606</string>
+    <string name="dummy_time">Tues: 10AM to 10PM</string>
+    <string name="open_now">Open now</string>
+    <string name="dummy_description"><![CDATA[Allens solly is a premium brand for Men, Women and Youth.]]><u>Read More</u></string>
+    <string name="about">About</string>
 
     <string-array name="message_title">
         <item>--Select an Item--</item>

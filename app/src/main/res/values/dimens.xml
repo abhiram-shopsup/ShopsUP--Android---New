@@ -19,4 +19,10 @@
     <dimen name="system_bar_plus_toolbar_height">56dp</dimen>
     <dimen name="app_bar_collapsing_height">160dp</dimen>
     <dimen name="extra_padding_snackbar">56dp</dimen>
+    <dimen name="store_scroll_left_pad">18dp</dimen>
+    <dimen name="store_scroll_top_pad">7dp</dimen>
+    <dimen name="store_scroll_sub_tv">14sp</dimen>
+    <dimen name="store_scroll_title_tv">24sp</dimen>
+    <dimen name="about_top_pad">8dp</dimen>
+    <dimen name="about_left_pad">20dp</dimen>
 </resources>

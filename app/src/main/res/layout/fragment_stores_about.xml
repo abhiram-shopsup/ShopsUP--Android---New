@@ -1,30 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/home_window_bg"
-    android:id="@+id/scrollview"
-    android:clipToPadding="false"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        >
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
 
 
-        <TextView
-            android:id="@+id/terms"
-            style="@style/AccountText"
-            android:text="About HERE"
-            />
+            <TextView
+                android:paddingTop="@dimen/about_top_pad"
+                android:paddingLeft="@dimen/about_left_pad"
+                android:drawableLeft="@drawable/ic_location_12dp"
+                android:id="@+id/viewinmap"
+                style="@style/AccountText"
+                android:text="@string/dummy_address"
+                />
 
-    </LinearLayout>
 
-</android.support.v4.widget.NestedScrollView>
+            <TextView
+                android:paddingTop="@dimen/about_top_pad"
+                android:paddingLeft="@dimen/about_left_pad"
+                android:drawableLeft="@drawable/ic_phone_icon"
+                style="@style/AccountText"
+                android:clickable="true"
+                android:text="@string/dummy_num"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingTop="@dimen/about_top_pad"
+                    android:paddingLeft="@dimen/about_left_pad"
+                    android:drawableLeft="@drawable/time_icon"
+                    style="@style/AccountText"
+                    android:text="@string/dummy_time"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/open_now"
+                    android:textColor="@android:color/holo_green_dark"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingTop="@dimen/about_top_pad"
+                    android:paddingLeft="@dimen/about_left_pad"
+                    android:drawableLeft="@drawable/ic_tag_icon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:drawableStart="@drawable/ic_tag_icon"/>
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/tagView"
+               android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:alignContent="stretch"
+                app:alignItems="stretch"
+                app:flexWrap="wrap" />
+            </LinearLayout>
+
+            <TextView
+                android:paddingTop="@dimen/about_top_pad"
+                android:paddingLeft="@dimen/about_left_pad"
+                style="@style/AccountText"
+                android:textSize="16sp"
+                android:text="@string/about"
+                />
+
+            <TextView
+                android:paddingTop="@dimen/about_top_pad"
+                android:paddingLeft="@dimen/about_left_pad"
+                style="@style/AccountText"
+                android:clickable="true"
+                android:textSize="14sp"
+                android:text="@string/dummy_description"
+                />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <Button
+        android:text="UBER BUTTON"
+        android:textColor="@color/white"
+        android:background="@color/black20pc"
+        android:layout_margin="5dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

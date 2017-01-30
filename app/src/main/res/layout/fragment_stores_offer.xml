@@ -8,23 +8,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        >
-
-
-
-        <TextView
-            android:id="@+id/terms"
-            style="@style/AccountText"
-            android:text="OFFERS HERE"
-            />
-
-    </LinearLayout>
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
 
 </android.support.v4.widget.NestedScrollView>
