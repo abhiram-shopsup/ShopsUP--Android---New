@@ -95,7 +95,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:text="@string/dummy_shot"
-                            android:drawableStart="@drawable/ic_shots_icon_18_dp"
+                            android:backgroundTint="@color/textColor"
+                            android:drawableStart="@drawable/ic_shots_icon_black_12dp"
                             android:textColor="@color/textColor"
                             android:textSize="14sp"/>
                     </LinearLayout>

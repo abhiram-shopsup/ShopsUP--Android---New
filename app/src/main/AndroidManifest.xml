@@ -24,7 +24,7 @@
         <activity android:name=".modules.introScreens.Activity_Intro" />
         <activity android:name=".activities.Activity_NoNetwork" />
         <activity android:name=".modules.account.Activity_More" />
-        <activity android:name=".modules.account.Activity_ActivityLog" />
+        <activity android:name=".modules.account.activitylog.Activity_ActivityLog" />
         <activity android:name=".modules.account.Activity_Terms" />
         <activity android:name=".modules.stores.Activity_StoreDetails"></activity>
     </application>

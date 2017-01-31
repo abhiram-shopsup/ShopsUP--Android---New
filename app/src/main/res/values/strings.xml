@@ -47,6 +47,11 @@
     <string name="open_now">Open now</string>
     <string name="dummy_description"><![CDATA[Allens solly is a premium brand for Men, Women and Youth.]]><u>Read More</u></string>
     <string name="about">About</string>
+    <string name="you_need">You need</string>
+    <string name="dummy_gift_card">Amazon Gift Card</string>
+    <string name="dummy_amount">1000</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
 
     <string-array name="message_title">
         <item>--Select an Item--</item>

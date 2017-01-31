@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hyperkonnect.shopsup.modules.account.Activity_Terms;
-import com.hyperkonnect.shopsup.modules.account.Activity_ActivityLog;
+import com.hyperkonnect.shopsup.modules.account.activitylog.Activity_ActivityLog;
 import com.hyperkonnect.shopsup.modules.account.Activity_ContactUs;
 import com.hyperkonnect.shopsup.modules.account.Activity_EditProfile;
 import com.hyperkonnect.shopsup.R;

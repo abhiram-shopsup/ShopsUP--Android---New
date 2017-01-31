@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/coupon_image_size"
+                android:layout_height="@dimen/coupon_image_size"
+                android:scaleType="centerCrop"
+                android:src="@color/colorAccent"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/image"
+                android:layout_toLeftOf="@+id/cost"
+                android:layout_toRightOf="@+id/image"
+                android:layout_toStartOf="@+id/cost"
+                android:layout_toEndOf="@+id/image"
+                android:ellipsize="end"
+                android:paddingBottom="2dp"
+                android:paddingTop="10dp"
+                android:maxLines="1"
+                android:text="@string/dummy_gift_card"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:textSize="12sp"
+                android:textColor="#828282"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/image"
+                android:layout_toLeftOf="@+id/cost"
+                android:layout_toRightOf="@+id/image"
+                android:layout_toStartOf="@+id/cost"
+                android:layout_toEndOf="@+id/image"
+                android:drawablePadding="3dp"
+                android:drawableLeft="@drawable/ic_clock_icon"
+                android:drawableStart="@drawable/ic_clock_icon"
+                android:ellipsize="end"
+                android:paddingBottom="10dp"
+                android:paddingTop="2dp"
+                android:maxLines="1"
+                android:text="@string/dummy_time"
+                />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:paddingTop="2dp"
+                android:drawableLeft="@drawable/shots_icon_white"
+                android:drawableStart="@drawable/shots_icon_white"
+                android:drawablePadding="5dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@color/black"
+                android:text="@string/dummy_amount"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>

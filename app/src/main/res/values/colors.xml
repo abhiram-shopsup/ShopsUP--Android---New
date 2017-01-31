@@ -9,4 +9,5 @@
     <color name="black20pc">#8b000000</color>
     <color name="tagColor">#dccfc4</color>
     <color name="textColor">#8bffffff</color>
+    <color name="black">#000</color>
 </resources>
