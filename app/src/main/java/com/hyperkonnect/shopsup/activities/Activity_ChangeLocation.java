@@ -1,39 +1,28 @@
-package com.hyperkonnect.shopsup.modules.account;
+package com.hyperkonnect.shopsup.activities;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.webkit.WebView;
-import android.widget.ProgressBar;
 
 import com.hyperkonnect.shopsup.R;
-import com.hyperkonnect.shopsup.helper.WebViewClientHelper;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class Activity_Terms extends AppCompatActivity {
-    private WebView webView;
-    private ProgressBar progressBar;
+public class Activity_ChangeLocation extends AppCompatActivity {
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_terms);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
-        toolbar.setTitle(getResources().getString(R.string.terms_amp_conditions));
+        setContentView(R.layout.activity_change_lo);
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle("Change location");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        webView = (WebView) findViewById(R.id.webView);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        webView.setWebViewClient(new WebViewClientHelper(progressBar));
-        webView.loadUrl("http://shopsup.com/terms/minimal/");
-
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -44,7 +33,6 @@ public class Activity_Terms extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));

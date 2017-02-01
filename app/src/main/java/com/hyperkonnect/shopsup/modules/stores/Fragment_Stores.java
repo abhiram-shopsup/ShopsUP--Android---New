@@ -1,4 +1,4 @@
-package com.hyperkonnect.shopsup.modules.account.activitylog;
+package com.hyperkonnect.shopsup.modules.stores;
 
 
 import android.os.Bundle;
@@ -9,13 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.hyperkonnect.shopsup.R;
-import com.hyperkonnect.shopsup.adapters.ActivityLogAdapter;
-import com.hyperkonnect.shopsup.adapters.OfferAdapter;
-import com.hyperkonnect.shopsup.dummydata.DummyOfferData;
+import com.hyperkonnect.shopsup.adapters.CouponAdapter;
+import com.hyperkonnect.shopsup.dummydata.DummyCouponData;
 import com.hyperkonnect.shopsup.model.CouponModel;
-import com.hyperkonnect.shopsup.model.OfferModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,16 +23,21 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_ActivityLog extends Fragment {
+public class Fragment_Stores extends Fragment {
+    private static final String URL = "URL";
+    private ProgressBar progress;
     private RecyclerView recyclerView;
-    private List<OfferModel> couponList;
-    private ActivityLogAdapter offerAdapter;
+    private CouponAdapter couponAdapter;
+    private List<CouponModel> couponList;
 
-    public Fragment_ActivityLog() {
+    public Fragment_Stores() {
     }
 
-    public static Fragment_ActivityLog newInstance() {
-        Fragment_ActivityLog staticPagesFragment = new Fragment_ActivityLog();
+    public static Fragment_Stores newInstance() {
+        Fragment_Stores staticPagesFragment = new Fragment_Stores();
+//        Bundle bundle = new Bundle();
+//        bundle.putString(URL, url);
+//        staticPagesFragment.setArguments(bundle);
         return staticPagesFragment;
     }
 
@@ -46,17 +50,17 @@ public class Fragment_ActivityLog extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_stores_offer, container, false);
+        View view = inflater.inflate(R.layout.fragment_my_coupons, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         couponList = new ArrayList<>();
 
-        offerAdapter = new ActivityLogAdapter(getContext(),couponList);
+        couponAdapter = new CouponAdapter(getContext(),couponList);
 
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 1);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(offerAdapter);
-        new DummyOfferData(couponList,offerAdapter);
+        recyclerView.setAdapter(couponAdapter);
+        new DummyCouponData(couponList,couponAdapter);
         return view;
     }
 

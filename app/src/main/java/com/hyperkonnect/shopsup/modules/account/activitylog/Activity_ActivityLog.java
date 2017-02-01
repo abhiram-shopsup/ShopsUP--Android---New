@@ -1,5 +1,6 @@
 package com.hyperkonnect.shopsup.modules.account.activitylog;
 
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,11 +12,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.hyperkonnect.shopsup.R;
-import com.hyperkonnect.shopsup.modules.account.Activity_More;
-import com.hyperkonnect.shopsup.modules.account.Fragment_More;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Activity_ActivityLog extends AppCompatActivity {
     private Toolbar toolbar;
@@ -87,5 +88,9 @@ public class Activity_ActivityLog extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

@@ -17,7 +17,7 @@ import com.hyperkonnect.shopsup.modules.account.Activity_ContactUs;
 import com.hyperkonnect.shopsup.modules.account.Activity_EditProfile;
 import com.hyperkonnect.shopsup.R;
 import com.hyperkonnect.shopsup.helper.ShopsupUiUtils;
-import com.hyperkonnect.shopsup.modules.account.Activity_More;
+import com.hyperkonnect.shopsup.modules.account.more.Activity_More;
 
 
 public class Fragment_Account extends Fragment {

@@ -1,5 +1,6 @@
 package com.hyperkonnect.shopsup.modules.account;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.hyperkonnect.shopsup.R;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Activity_ContactUs extends AppCompatActivity {
 
@@ -31,5 +34,10 @@ public class Activity_ContactUs extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

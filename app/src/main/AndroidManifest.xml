@@ -23,10 +23,12 @@
         <activity android:name=".modules.account.Activity_ContactUs" />
         <activity android:name=".modules.introScreens.Activity_Intro" />
         <activity android:name=".activities.Activity_NoNetwork" />
-        <activity android:name=".modules.account.Activity_More" />
+        <activity android:name=".modules.account.more.Activity_More" />
         <activity android:name=".modules.account.activitylog.Activity_ActivityLog" />
         <activity android:name=".modules.account.Activity_Terms" />
-        <activity android:name=".modules.stores.Activity_StoreDetails"></activity>
+        <activity android:name=".modules.stores.Activity_StoreDetails" />
+        <activity android:name=".modules.coupons.Activity_CouponDetails" />
+        <activity android:name=".activities.Activity_ChangeLocation"></activity>
     </application>
 
 </manifest>

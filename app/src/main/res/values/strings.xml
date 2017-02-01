@@ -52,6 +52,23 @@
     <string name="dummy_amount">1000</string>
     <string name="navigation_drawer_open">open</string>
     <string name="navigation_drawer_close">close</string>
+    <string name="filter">Filter</string>
+    <string name="hint_search">Search Stores</string>
+    <string name="noCoupon">You don’t have any coupons</string>
+    <string name="noCouponDes">All your redeemed coupons will be saved here</string>
+    <string name="redeem">Redeem</string>
+    <string name="shots_required">Shots Required</string>
+    <string name="present_counter">Present coupon at the counter</string>
+    <string name="quantity_coupon">Select quantity of your coupon</string>
+    <string name="add_16">Get 16 digit voucher code, and Pin via SMS</string>
+    <string name="how_to_redeem">How to redeem?</string>
+    <string name="need_shots">You need 150 shots more</string>
+    <string name="earn_free_shots">Earn free shots</string>
+    <string name="only_shots">You only have 350 shots</string>
+    <string name="refer_your_friends">Refer your friends</string>
+    <string name="ref_friend_desc"><![CDATA[Refer your friends & earn 10 shots on their first walk in.]]></string>
+    <string name="start_typing">Start typing...</string>
+    <string name="auto_detect_location">Auto detect</string>
 
     <string-array name="message_title">
         <item>--Select an Item--</item>

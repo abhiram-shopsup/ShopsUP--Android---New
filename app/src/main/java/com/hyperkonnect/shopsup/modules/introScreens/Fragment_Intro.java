@@ -83,7 +83,7 @@ public class Fragment_Intro extends Fragment {
             default:
                 title = getString(R.string.intro_title_one);
                 shortTitle = getString(R.string.intro_desc_one);
-                image = getResources().getDrawable(R.drawable.allensolly);
+                image = getResources().getDrawable(R.drawable.amazon);
         }
         ImageView imageView = (ImageView) view.findViewById(R.id.tv);
         TextView titleTV = (TextView) view.findViewById(R.id.title);

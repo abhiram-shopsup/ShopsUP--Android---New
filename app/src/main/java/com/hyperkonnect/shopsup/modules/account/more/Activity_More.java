@@ -1,5 +1,6 @@
-package com.hyperkonnect.shopsup.modules.account;
+package com.hyperkonnect.shopsup.modules.account.more;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,8 @@ import com.hyperkonnect.shopsup.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Activity_More extends AppCompatActivity {
 
@@ -92,6 +95,11 @@ public class Activity_More extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
 }

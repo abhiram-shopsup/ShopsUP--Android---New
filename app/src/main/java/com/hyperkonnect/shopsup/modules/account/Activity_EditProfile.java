@@ -1,5 +1,6 @@
 package com.hyperkonnect.shopsup.modules.account;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.ImageView;
 
 import com.hyperkonnect.shopsup.R;
 import com.hyperkonnect.shopsup.helper.ShopsupUiUtils;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Activity_EditProfile extends AppCompatActivity {
 
@@ -38,5 +41,10 @@ public class Activity_EditProfile extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

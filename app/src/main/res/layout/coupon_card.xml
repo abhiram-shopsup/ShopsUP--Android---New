@@ -14,7 +14,9 @@
             android:layout_width="157dp"
             android:layout_height="108dp"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_bot_margin"
+            android:layout_marginTop="@dimen/card_bot_margin"
             android:elevation="3dp"
             card_view:cardCornerRadius="@dimen/card_album_radius">
 
