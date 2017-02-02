@@ -104,9 +104,6 @@
                 </LinearLayout>
 
 
-
-
-
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/fab"
                     android:layout_width="64dp"

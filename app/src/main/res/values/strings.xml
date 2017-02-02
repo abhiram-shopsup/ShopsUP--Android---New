@@ -32,7 +32,7 @@
     <string name="noNet">Oops, Your connection seems off!</string>
     <string name="noNetDes">Your internet needs to be turned ON for us to get started.</string>
     <string name="toggle_net">Please tap to retry</string>
-    <string name="bysigning"><u><![CDATA[By signing up you agree to our T&C]]></u></string>
+    <string name="bysigning"><![CDATA[By signing up you agree to our T&C]]></string>
     <string name="sign_up_or_login">Sign Up or Login</string>
     <string name="prakash_bala">Prakash Bala</string>
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
@@ -69,6 +69,10 @@
     <string name="ref_friend_desc"><![CDATA[Refer your friends & earn 10 shots on their first walk in.]]></string>
     <string name="start_typing">Start typing...</string>
     <string name="auto_detect_location">Auto detect</string>
+    <string name="amazon_gift_card">Amazon Gift Card</string>
+    <string name="dummy_amount_rupee">₹ 250/-</string>
+    <string name="dummy_code">XX - XX - XX - XX - XX - XX</string>
+    <string name="receive_pin">Didn’t receive pin?\nRESEND PIN</string>
 
     <string-array name="message_title">
         <item>--Select an Item--</item>

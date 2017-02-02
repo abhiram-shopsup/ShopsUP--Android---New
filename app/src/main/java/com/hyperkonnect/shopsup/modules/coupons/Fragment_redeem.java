@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.hyperkonnect.shopsup.R;
@@ -17,6 +18,7 @@ import com.hyperkonnect.shopsup.adapters.CouponAdapter;
 import com.hyperkonnect.shopsup.adapters.OfferAdapter;
 import com.hyperkonnect.shopsup.dummydata.DummyCouponData;
 import com.hyperkonnect.shopsup.dummydata.DummyOfferData;
+import com.hyperkonnect.shopsup.helper.ShopsupUiUtils;
 import com.hyperkonnect.shopsup.helper.WebViewClientHelper;
 import com.hyperkonnect.shopsup.model.CouponModel;
 
@@ -33,6 +35,7 @@ public class Fragment_redeem extends Fragment {
     private RecyclerView recyclerView;
     private List<CouponModel> couponList;
     private CouponAdapter couponAdapter;
+    private LinearLayout linearLayout;
 
     public Fragment_redeem() {
     }
@@ -55,6 +58,7 @@ public class Fragment_redeem extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_redeem, container, false);
+        linearLayout = (LinearLayout)view.findViewById(R.id.header);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         couponList = new ArrayList<>();
 
@@ -65,6 +69,13 @@ public class Fragment_redeem extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(couponAdapter);
         new DummyCouponData(couponList,couponAdapter);
+
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShopsupUiUtils.showDialog(getActivity(),R.layout.my_coupon_popup);
+            }
+        });
         return view;
     }
 
