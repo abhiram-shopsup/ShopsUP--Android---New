@@ -29,4 +29,5 @@
     <dimen name="card_album_radius">3dp</dimen>
     <dimen name="card_bot_margin">6dp</dimen>
     <dimen name="redeem_steps_text">14sp</dimen>
+    <dimen name="intro_mar">16dp</dimen>
 </resources>
