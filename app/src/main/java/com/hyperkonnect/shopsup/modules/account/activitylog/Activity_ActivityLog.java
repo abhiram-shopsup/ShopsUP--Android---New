@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.hyperkonnect.shopsup.R;
+import com.hyperkonnect.shopsup.adapters.ViewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,43 +53,13 @@ public class Activity_ActivityLog extends AppCompatActivity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        Activity_ActivityLog.ViewPagerAdapter adapter = new Activity_ActivityLog.ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(Fragment_ActivityLog.newInstance(), "All");
         adapter.addFragment(Fragment_ActivityLog.newInstance(), "Earned");
         adapter.addFragment(Fragment_ActivityLog.newInstance(), "Spent");
         viewPager.setAdapter(adapter);
     }
 
-
-    class ViewPagerAdapter extends FragmentPagerAdapter {
-        private static final String TAG = "ViewPagerAdapter";
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-        private final List<String> mFragmentTitleList = new ArrayList<>();
-
-        public ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        public void addFragment(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
-        }
-    }
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));

@@ -22,7 +22,7 @@
             <TextView
                 android:paddingTop="@dimen/about_top_pad"
                 android:paddingLeft="@dimen/about_left_pad"
-                android:drawableLeft="@drawable/ic_location_12dp"
+                android:drawableLeft="@drawable/store_location_icon"
                 android:id="@+id/viewinmap"
                 style="@style/AccountText"
                 android:text="@string/dummy_address"
@@ -32,7 +32,7 @@
             <TextView
                 android:paddingTop="@dimen/about_top_pad"
                 android:paddingLeft="@dimen/about_left_pad"
-                android:drawableLeft="@drawable/ic_phone_icon"
+                android:drawableLeft="@drawable/store_phone_icon"
                 style="@style/AccountText"
                 android:clickable="true"
                 android:text="@string/dummy_num"
@@ -45,7 +45,7 @@
                 <TextView
                     android:paddingTop="@dimen/about_top_pad"
                     android:paddingLeft="@dimen/about_left_pad"
-                    android:drawableLeft="@drawable/time_icon"
+                    android:drawableLeft="@drawable/store_time_icon"
                     style="@style/AccountText"
                     android:text="@string/dummy_time"
                     />
@@ -60,14 +60,16 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/about_top_pad"
                 android:orientation="horizontal">
                 <TextView
-                    android:paddingTop="@dimen/about_top_pad"
+
                     android:paddingLeft="@dimen/about_left_pad"
-                    android:drawableLeft="@drawable/ic_tag_icon"
+                    android:drawableLeft="@drawable/store_tags_icon"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:drawableStart="@drawable/ic_tag_icon"/>
+                    android:paddingRight="5dp"
+                    />
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/tagView"
                android:layout_height="wrap_content"
@@ -81,22 +83,21 @@
                 android:paddingTop="@dimen/about_top_pad"
                 android:paddingLeft="@dimen/about_left_pad"
                 style="@style/AccountText"
-                android:textSize="16sp"
+                android:textSize="@dimen/about_head_text"
                 android:text="@string/about"
                 />
 
             <TextView
-                android:paddingTop="@dimen/about_top_pad"
                 android:paddingLeft="@dimen/about_left_pad"
                 style="@style/AccountText"
                 android:clickable="true"
-                android:textSize="14sp"
+                android:textSize="@dimen/about_desc_text"
                 android:text="@string/dummy_description"
                 />
             <!--<RelativeLayout-->
                 <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content">-->
-           <!---->
+           <!--STATIC UBER BUTTON-->
             <!--</RelativeLayout>-->
 
         </LinearLayout>
@@ -107,7 +108,7 @@
     <Button
         android:text="UBER BUTTON"
         android:textColor="@color/white"
-        android:background="@color/black20pc"
+        android:background="@color/black"
         android:layout_margin="5dp"
         android:layout_width="250dp"
         android:layout_height="50dp"

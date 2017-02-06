@@ -23,11 +23,13 @@
     <dimen name="store_scroll_top_pad">7dp</dimen>
     <dimen name="store_scroll_sub_tv">14sp</dimen>
     <dimen name="store_scroll_title_tv">24sp</dimen>
-    <dimen name="about_top_pad">8dp</dimen>
-    <dimen name="about_left_pad">20dp</dimen>
+    <dimen name="about_top_pad">16dp</dimen>
+    <dimen name="about_left_pad">16dp</dimen>
     <dimen name="card_margin">12dp</dimen>
     <dimen name="card_album_radius">3dp</dimen>
     <dimen name="card_bot_margin">6dp</dimen>
     <dimen name="redeem_steps_text">14sp</dimen>
     <dimen name="intro_mar">16dp</dimen>
+    <dimen name="about_head_text">16sp</dimen>
+    <dimen name="about_desc_text">14sp</dimen>
 </resources>

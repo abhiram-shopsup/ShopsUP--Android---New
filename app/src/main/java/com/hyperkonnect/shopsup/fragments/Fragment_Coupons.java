@@ -1,5 +1,6 @@
 package com.hyperkonnect.shopsup.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -7,17 +8,23 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hyperkonnect.shopsup.MainActivity;
 import com.hyperkonnect.shopsup.R;
+import com.hyperkonnect.shopsup.activities.Activity_ChangeLocation;
 import com.hyperkonnect.shopsup.adapters.ExpandableListAdapter;
+import com.hyperkonnect.shopsup.adapters.ViewPagerAdapter;
 import com.hyperkonnect.shopsup.dummydata.DummyFilterData;
+import com.hyperkonnect.shopsup.helper.ShopsupUiUtils;
 import com.hyperkonnect.shopsup.helper.ui.CustomDrawer;
 import com.hyperkonnect.shopsup.modules.coupons.Fragment_MyCoupons;
 import com.hyperkonnect.shopsup.modules.coupons.Fragment_redeem;
@@ -36,6 +43,8 @@ public class Fragment_Coupons extends Fragment {
     private ExpandableListView expListView;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
+    private Toolbar toolbar;
+
 
     public Fragment_Coupons() {
         // Required empty public constructor
@@ -56,6 +65,9 @@ public class Fragment_Coupons extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_coupons, container, false);
+        toolbar = (Toolbar)view.findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        toolbar.setTitle(getResources().getString(R.string.coupons));
         imageView = (ImageView)view.findViewById(R.id.filter);
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -142,42 +154,13 @@ public class Fragment_Coupons extends Fragment {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        Fragment_Coupons.ViewPagerAdapter adapter = new Fragment_Coupons.ViewPagerAdapter(getChildFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(Fragment_redeem.newInstance(), "redeem");
         adapter.addFragment(Fragment_MyCoupons.newInstance(), "coupons");
         viewPager.setAdapter(adapter);
     }
 
 
-    class ViewPagerAdapter extends FragmentPagerAdapter {
-        private static final String TAG = "ViewPagerAdapter";
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-        private final List<String> mFragmentTitleList = new ArrayList<>();
-
-        public ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        public void addFragment(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
-        }
-    }
 
 
 }

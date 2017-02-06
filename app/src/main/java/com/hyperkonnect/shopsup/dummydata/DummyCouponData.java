@@ -27,6 +27,25 @@ public class DummyCouponData {
         couponModel = new CouponModel("100","here");
         couponList.add(couponModel);
 
+
+        couponModel = new CouponModel("1000","here");
+        couponList.add(couponModel);
+
+        couponModel = new CouponModel("100","here");
+        couponList.add(couponModel);
+
+        couponModel = new CouponModel("1000","here");
+        couponList.add(couponModel);
+
+        couponModel = new CouponModel("100","here");
+        couponList.add(couponModel);
+
+        couponModel = new CouponModel("1000","here");
+        couponList.add(couponModel);
+
+        couponModel = new CouponModel("100","here");
+        couponList.add(couponModel);
+
         adapter.notifyDataSetChanged();
 
     }

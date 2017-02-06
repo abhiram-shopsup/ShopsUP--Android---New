@@ -27,7 +27,7 @@
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/toolbar_layout"
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="240dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="?attr/colorPrimary">
 
@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/colorPrimary"
-                    android:layout_marginTop="160dp"/>
+                    android:layout_marginTop="140dp"/>
 
                 <LinearLayout
                     android:id="@+id/extraLayout"
@@ -96,7 +96,7 @@
                             android:layout_marginTop="16dp"
                             android:text="@string/dummy_shot"
                             android:backgroundTint="@color/textColor"
-                            android:drawableStart="@drawable/ic_shots_icon_black_12dp"
+                            android:drawableStart="@drawable/details_shots_icon"
                             android:textColor="@color/textColor"
                             android:textSize="14sp"/>
                     </LinearLayout>

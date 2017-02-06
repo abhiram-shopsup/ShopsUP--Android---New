@@ -7,40 +7,12 @@
     android:layout_height="match_parent"
     tools:context="com.hyperkonnect.shopsup.MainActivity">
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        style="@style/Toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        tools:popupTheme="@style/AppTheme.PopupOverlay">
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/changeLoc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:drawableStart="@drawable/ic_location_icon_b"
-                android:text="@string/dummy_location"/>
-
-        <LinearLayout
-            android:layout_alignParentEnd="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/shotsIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:drawableStart="@drawable/ic_shots_icon_18_dp"
-                android:text="@string/dummy_shot"/>
-        </LinearLayout>
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
+        android:visibility="invisible"></android.support.v7.widget.Toolbar>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
         android:layout_above="@+id/bottom_navigation"
         android:id="@+id/content"/>

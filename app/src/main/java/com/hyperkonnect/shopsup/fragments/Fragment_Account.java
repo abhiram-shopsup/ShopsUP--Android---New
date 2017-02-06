@@ -4,6 +4,7 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ import com.hyperkonnect.shopsup.modules.account.more.Activity_More;
 public class Fragment_Account extends Fragment {
     private TextView activityLog,editProfileTV,contactUsTV,terms,more;
     private ImageView profileImage;
+    private Toolbar toolbar;
     public Fragment_Account() {
         // Required empty public constructor
     }
@@ -44,6 +46,8 @@ public class Fragment_Account extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         profileImage = (ImageView) view.findViewById(R.id.profileImage);
+        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        toolbar.setTitle(getResources().getString(R.string.account));
 
         activityLog = (TextView)view.findViewById(R.id.activityLog);
         editProfileTV = (TextView) view.findViewById(R.id.editProfile);

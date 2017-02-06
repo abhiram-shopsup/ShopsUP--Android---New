@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/home_window_bg"
     android:id="@+id/scrollview"
-    android:clipToPadding="false"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        tools:popupTheme="@style/AppTheme.PopupOverlay">
+        </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,9 +56,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:drawableLeft="@drawable/ic_shots_icon_black_12dp"
+            android:drawableLeft="@drawable/details_shots_icon"
             android:drawablePadding="6dp"
-            android:drawableStart="@drawable/ic_shots_icon_black_12dp"
             android:text="500"
             android:padding="5dp"
             android:textColor="@android:color/black"
@@ -92,8 +106,8 @@
         <TextView
             android:id="@+id/changeLoc"
             style="@style/AccountText"
-            android:drawableLeft="@drawable/ic_location_12dp"
-            android:drawableStart="@drawable/ic_location_12dp"
+            android:drawableLeft="@drawable/location_icon"
+            android:drawableStart="@drawable/location_icon"
             android:text="@string/change_location"
             android:padding="6dp"
             android:drawableRight="@drawable/ic_chevron_right_black_24dp"
@@ -168,5 +182,6 @@
             />
 
     </LinearLayout>
+    </ScrollView>
 
-</android.support.v4.widget.NestedScrollView>
+</LinearLayout>
