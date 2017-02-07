@@ -7,7 +7,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,10 +39,7 @@ public class Fragment_Stores extends Fragment {
     private TabLayout tabLayout;
     private ImageView imageView;
     private CustomDrawer drawer;
-    private ExpandableListAdapter listAdapter;
-    private ExpandableListView expListView;
-    private List<String> listDataHeader;
-    private HashMap<String, List<String>> listDataChild;
+
     private Toolbar toolbar;
     private TextView changeLocationTv,shotsIcon;
 
@@ -78,7 +77,9 @@ public class Fragment_Stores extends Fragment {
         tabLayout = (TabLayout) view.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        drawer = (CustomDrawer) view.findViewById(R.id.drawer_layout);
+        drawer = (CustomDrawer) getActivity().findViewById(R.id.drawer_layout_main);
+
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,77 +88,7 @@ public class Fragment_Stores extends Fragment {
             }
 
         });
-        drawer = (CustomDrawer) view.findViewById(R.id.drawer_layout);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawer.openDrawer(Gravity.RIGHT);
 
-            }
-
-        });
-        expListView = (ExpandableListView) view.findViewById(R.id.lvExp);
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
-
-        // preparing list data
-        DummyFilterData.prepareListData(listDataHeader,listDataChild);
-
-        listAdapter = new ExpandableListAdapter(getActivity(), listDataHeader, listDataChild);
-
-        // setting list adapter
-        expListView.setAdapter(listAdapter);
-
-        // Listview Group click listener
-        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-
-            @Override
-            public boolean onGroupClick(ExpandableListView parent, View v,
-                                        int groupPosition, long id) {
-                // Toast.makeText(getApplicationContext(),
-                // "Group Clicked " + listDataHeader.get(groupPosition),
-                // Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
-
-        // Listview Group expanded listener
-        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-
-            @Override
-            public void onGroupExpand(int groupPosition) {
-//                Toast.makeText(getActivity().getApplicationContext(),
-//                        listDataHeader.get(groupPosition) + " Expanded",
-//                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // Listview Group collasped listener
-        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-            }
-        });
-
-        // Listview on child click listener
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                // TODO Auto-generated method stub
-//                Toast.makeText(
-//                        getActivity().getApplicationContext(),
-//                        listDataHeader.get(groupPosition)
-//                                + " : "
-//                                + listDataChild.get(
-//                                listDataHeader.get(groupPosition)).get(
-//                                childPosition), Toast.LENGTH_SHORT)
-//                        .show();
-                return false;
-            }
-        });
 
         changeLocationTv.setOnClickListener(new View.OnClickListener() {
             @Override
