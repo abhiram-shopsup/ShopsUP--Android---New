@@ -37,7 +37,7 @@ import java.util.List;
 public class Fragment_Coupons extends Fragment {
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private ImageView imageView;
+    //private ImageView imageView;
     private CustomDrawer drawer;
 //    private ExpandableListAdapter listAdapter;
 //    private ExpandableListView expListView;
@@ -68,7 +68,7 @@ public class Fragment_Coupons extends Fragment {
         toolbar = (Toolbar)view.findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         toolbar.setTitle(getResources().getString(R.string.coupons));
-        imageView = (ImageView)view.findViewById(R.id.filter);
+       // imageView = (ImageView)view.findViewById(R.id.filter);
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
@@ -76,14 +76,14 @@ public class Fragment_Coupons extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
 
         drawer = (CustomDrawer) getActivity().findViewById(R.id.drawer_layout_main);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawer.openDrawer(Gravity.RIGHT);
-
-            }
-
-        });
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                drawer.openDrawer(Gravity.RIGHT);
+//
+//            }
+//
+//        });
 //        expListView = (ExpandableListView) getActivity().findViewById(R.id.lvExp);
 //
 //        listDataHeader = new ArrayList<String>();

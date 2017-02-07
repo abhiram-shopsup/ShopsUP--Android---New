@@ -34,13 +34,13 @@
                     app:tabSelectedTextColor="@color/colorAccent"
                     app:tabTextColor="@color/black20pc" />
 
-                <ImageView
-                    android:id="@+id/filter"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:padding="10dp"
-                    android:src="@drawable/filter_icon" />
+                <!--<ImageView-->
+                    <!--android:id="@+id/filter"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:src="@drawable/filter_icon" />-->
             </RelativeLayout>
         </android.support.design.widget.AppBarLayout>
 
