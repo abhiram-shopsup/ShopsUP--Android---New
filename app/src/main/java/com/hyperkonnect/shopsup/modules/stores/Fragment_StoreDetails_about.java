@@ -4,6 +4,7 @@ package com.hyperkonnect.shopsup.modules.stores;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,9 @@ public class Fragment_StoreDetails_about extends Fragment {
             TagView tagViewTV = new TagView(getContext());
             tagViewTV.setText("kids");
             tagView.addView(tagViewTV);
+            Log.i("tagviewid",tagViewTV.getId()+"");
         }
+
         return view;
     }
 
